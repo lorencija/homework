@@ -1,0 +1,70 @@
+$bacgroundColor: #fff;
+$lineColor: rgb(248, 111, 47);
+$lineEndColor: rgb(179, 21, 6);
+
+$bacgroundImage: "./images/blue-sky.jpg";
+$iconMove: "./icons/movie.svg";
+$iconSearch: "./icons/search.svg";
+
+$mainFont: Ariel, sans-serif;
+
+$moveIconSize: 30px;
+$searchIconSize: 40px;
+
+body {
+    margin: 0;
+    font-family: $mainFont;
+    background-image: url($bacgroundImage);
+    width: 100%;    
+}
+
+.container {
+    background-color: $bacgroundColor;
+    margin: 0 5%;
+    height: 100vh;
+    .searchLine{
+        background-image: linear-gradient(to right, $lineColor, $lineEndColor);
+        padding: 20px;
+        display: flex;
+        justify-content: space-between;
+        .form{
+            background: rgba(255, 255, 255, 0.3);
+            margin: 10px 2px 2px 15px;
+            padding: 10px 20px;
+            width: 100%;
+            border-radius: 2px;
+            color: $bacgroundColor;
+            display: flex;
+            align-items: center;
+            font-weight: 600;
+            .search-text{
+                padding: 0 10px;
+            }
+            .icon-move {
+                background-image: url($iconMove);
+                filter: invert(100%);
+                width: $moveIconSize;
+                height: $moveIconSize;
+            }
+        }
+        .button{
+            margin: 10px 10px 2px 1px;
+            
+            width: 60px;
+            border: none;
+            color: $lineColor;
+            border-radius: 2px;
+            background-color: $bacgroundColor;
+            .icon-search {
+                background-image: url($iconSearch);
+                filter: invert(27%) sepia(51%) saturate(2878%) brightness(104%) contrast(97%);
+                width: $searchIconSize;
+                height: $searchIconSize;
+            }
+        }
+        .icon {
+            display: inline-block;    
+            background-size: cover;
+        }
+    }
+}
